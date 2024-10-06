@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagrame</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
+    <style>
+        img{
+            width: 612px;
+            height: 382px;
+        }
+
+    </style>
+
+   
+
+</head>
+<body>
+    <h2>THIS page belong to : <span style="color: aqua ;  "><%= data.name %> </span></h2>
+    <button class="babau">Follow</button>
+    <button class="babau">Message</button>
+
+    <p>followers : <%=data.followers%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; following : <%= data.following %> </p>
+
+    <hr>
+
+    <ul>
+        <% for(let post of data.posts){ %>
+        
+        <img src=<%=post.image%> alt="some image ">
+        <p>like : <%=post.likes%> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; comments : <%=post.comments%>  </p>
+        <%}%>
+
+    </ul>
+
+    
+
+</body>
+</html>
